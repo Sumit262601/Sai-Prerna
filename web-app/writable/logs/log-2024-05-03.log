@@ -1,0 +1,183 @@
+INFO - 2024-05-03 10:08:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-03 10:08:00 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'trust' in C:\xampp\htdocs\trust\web-app\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\xampp\htdocs\trust\web-app\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'trust', 3306, '', 0)
+#1 C:\xampp\htdocs\trust\web-app\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\trust\web-app\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\trust\web-app\system\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\trust\web-app\app\Models\CurdModel.php(53): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\trust\web-app\app\Controllers\Front_Home.php(12): App\Models\CurdModel->get_all('*', 'images', Array, 'id', 'ACS')
+#6 C:\xampp\htdocs\trust\web-app\system\CodeIgniter.php(941): App\Controllers\Front_Home->index()
+#7 C:\xampp\htdocs\trust\web-app\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Front_Home))
+#8 C:\xampp\htdocs\trust\web-app\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\trust\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'trust' in C:\xampp\htdocs\trust\web-app\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp\htdocs\trust\web-app\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\trust\web-app\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\trust\web-app\system\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\trust\web-app\app\Models\CurdModel.php(53): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\trust\web-app\app\Controllers\Front_Home.php(12): App\Models\CurdModel->get_all('*', 'images', Array, 'id', 'ACS')
+#5 C:\xampp\htdocs\trust\web-app\system\CodeIgniter.php(941): App\Controllers\Front_Home->index()
+#6 C:\xampp\htdocs\trust\web-app\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Front_Home))
+#7 C:\xampp\htdocs\trust\web-app\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\trust\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-05-03 10:08:00 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'trust'
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `images`
+WHERE `status` = :status:
+ORDER BY `id`', [...], false)
+ 3 APPPATH\Models\CurdModel.php(53): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\Front_Home.php(12): App\Models\CurdModel->get_all('*', 'images', [...], 'id', 'ACS')
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Front_Home->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Front_Home))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-05-03 10:08:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-03 10:08:56 --> mysqli_sql_exception: Table 'trust.images' doesn't exist in C:\xampp\htdocs\trust\web-app\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\trust\web-app\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\trust\web-app\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\trust\web-app\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\trust\web-app\system\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\trust\web-app\app\Models\CurdModel.php(53): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\trust\web-app\app\Controllers\Front_Home.php(12): App\Models\CurdModel->get_all('*', 'images', Array, 'id', 'ACS')
+#6 C:\xampp\htdocs\trust\web-app\system\CodeIgniter.php(941): App\Controllers\Front_Home->index()
+#7 C:\xampp\htdocs\trust\web-app\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Front_Home))
+#8 C:\xampp\htdocs\trust\web-app\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\trust\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-05-03 10:08:56 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'trust.images' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `images`
+WHERE `status` = :status:
+ORDER BY `id`', [...], false)
+ 2 APPPATH\Models\CurdModel.php(53): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Front_Home.php(12): App\Models\CurdModel->get_all('*', 'images', [...], 'id', 'ACS')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Front_Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Front_Home))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-03 10:08:56 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'trust.images' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `images`
+WHERE `status` = \'A\'
+ORDER BY `id`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `images`
+WHERE `status` = \'A\'
+ORDER BY `id`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `images`
+WHERE `status` = :status:
+ORDER BY `id`', [...], false)
+ 4 APPPATH\Models\CurdModel.php(53): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Front_Home.php(12): App\Models\CurdModel->get_all('*', 'images', [...], 'id', 'ACS')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Front_Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Front_Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-03 10:08:56 --> [Caused by] mysqli_sql_exception: Table 'trust.images' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `images`
+WHERE `status` = \'A\'
+ORDER BY `id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `images`
+WHERE `status` = \'A\'
+ORDER BY `id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `images`
+WHERE `status` = \'A\'
+ORDER BY `id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `images`
+WHERE `status` = :status:
+ORDER BY `id`', [...], false)
+ 5 APPPATH\Models\CurdModel.php(53): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Front_Home.php(12): App\Models\CurdModel->get_all('*', 'images', [...], 'id', 'ACS')
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Front_Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Front_Home))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-05-03 10:10:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-03 10:10:00 --> mysqli_sql_exception: Table 'trust.images' doesn't exist in C:\xampp\htdocs\trust\web-app\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\trust\web-app\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\trust\web-app\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\trust\web-app\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\trust\web-app\system\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\trust\web-app\app\Models\CurdModel.php(53): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\trust\web-app\app\Controllers\Front_Home.php(12): App\Models\CurdModel->get_all('*', 'images', Array, 'id', 'ACS')
+#6 C:\xampp\htdocs\trust\web-app\system\CodeIgniter.php(941): App\Controllers\Front_Home->index()
+#7 C:\xampp\htdocs\trust\web-app\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Front_Home))
+#8 C:\xampp\htdocs\trust\web-app\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\trust\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2024-05-03 10:10:00 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'trust.images' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `images`
+WHERE `status` = :status:
+ORDER BY `id`', [...], false)
+ 2 APPPATH\Models\CurdModel.php(53): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Front_Home.php(12): App\Models\CurdModel->get_all('*', 'images', [...], 'id', 'ACS')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Front_Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Front_Home))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-03 10:10:00 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'trust.images' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `images`
+WHERE `status` = \'A\'
+ORDER BY `id`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `images`
+WHERE `status` = \'A\'
+ORDER BY `id`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `images`
+WHERE `status` = :status:
+ORDER BY `id`', [...], false)
+ 4 APPPATH\Models\CurdModel.php(53): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Front_Home.php(12): App\Models\CurdModel->get_all('*', 'images', [...], 'id', 'ACS')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Front_Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Front_Home))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-05-03 10:10:00 --> [Caused by] mysqli_sql_exception: Table 'trust.images' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `images`
+WHERE `status` = \'A\'
+ORDER BY `id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `images`
+WHERE `status` = \'A\'
+ORDER BY `id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `images`
+WHERE `status` = \'A\'
+ORDER BY `id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `images`
+WHERE `status` = :status:
+ORDER BY `id`', [...], false)
+ 5 APPPATH\Models\CurdModel.php(53): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Front_Home.php(12): App\Models\CurdModel->get_all('*', 'images', [...], 'id', 'ACS')
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Front_Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Front_Home))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-05-03 10:13:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-03 10:14:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

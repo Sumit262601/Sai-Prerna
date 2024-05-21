@@ -1,0 +1,131 @@
+INFO - 2024-05-07 06:20:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-07 06:21:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-07 06:22:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-07 06:24:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-07 06:24:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-07 06:25:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-07 06:25:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-07 07:12:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-07 07:12:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-07 07:14:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-07 07:14:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-07 07:15:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-07 07:19:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-07 07:19:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-07 07:19:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-07 07:38:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-07 07:38:10 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\trust\web-app\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\xampp\htdocs\trust\web-app\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'trust', 3306, '', 0)
+#1 C:\xampp\htdocs\trust\web-app\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\trust\web-app\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\trust\web-app\system\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\trust\web-app\app\Models\CurdModel.php(53): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\trust\web-app\app\Controllers\Front_Home.php(12): App\Models\CurdModel->get_all('*', 'images', Array, 'id', 'ACS')
+#6 C:\xampp\htdocs\trust\web-app\system\CodeIgniter.php(941): App\Controllers\Front_Home->index()
+#7 C:\xampp\htdocs\trust\web-app\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Front_Home))
+#8 C:\xampp\htdocs\trust\web-app\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\trust\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\trust\web-app\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp\htdocs\trust\web-app\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\trust\web-app\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\trust\web-app\system\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\trust\web-app\app\Models\CurdModel.php(53): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\trust\web-app\app\Controllers\Front_Home.php(12): App\Models\CurdModel->get_all('*', 'images', Array, 'id', 'ACS')
+#5 C:\xampp\htdocs\trust\web-app\system\CodeIgniter.php(941): App\Controllers\Front_Home->index()
+#6 C:\xampp\htdocs\trust\web-app\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Front_Home))
+#7 C:\xampp\htdocs\trust\web-app\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\trust\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-05-07 07:38:10 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `images`
+WHERE `status` = :status:
+ORDER BY `id`', [...], false)
+ 3 APPPATH\Models\CurdModel.php(53): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\Front_Home.php(12): App\Models\CurdModel->get_all('*', 'images', [...], 'id', 'ACS')
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Front_Home->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Front_Home))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-05-07 07:38:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-07 07:38:14 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\trust\web-app\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\xampp\htdocs\trust\web-app\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'trust', 3306, '', 0)
+#1 C:\xampp\htdocs\trust\web-app\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\trust\web-app\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\trust\web-app\system\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT `ip_addr...', Array, false)
+#4 C:\xampp\htdocs\trust\web-app\app\Models\CurdModel.php(12): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\trust\web-app\app\Controllers\AdminHome.php(13): App\Models\CurdModel->get_1('ip_address', 'allowed_ip', Array)
+#6 C:\xampp\htdocs\trust\web-app\system\CodeIgniter.php(941): App\Controllers\AdminHome->index()
+#7 C:\xampp\htdocs\trust\web-app\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminHome))
+#8 C:\xampp\htdocs\trust\web-app\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\trust\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\trust\web-app\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp\htdocs\trust\web-app\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\trust\web-app\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\trust\web-app\system\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT `ip_addr...', Array, false)
+#3 C:\xampp\htdocs\trust\web-app\app\Models\CurdModel.php(12): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\trust\web-app\app\Controllers\AdminHome.php(13): App\Models\CurdModel->get_1('ip_address', 'allowed_ip', Array)
+#5 C:\xampp\htdocs\trust\web-app\system\CodeIgniter.php(941): App\Controllers\AdminHome->index()
+#6 C:\xampp\htdocs\trust\web-app\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminHome))
+#7 C:\xampp\htdocs\trust\web-app\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\trust\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-05-07 07:38:14 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1613): CodeIgniter\Database\BaseConnection->query('SELECT `ip_address`
+FROM `allowed_ip`
+WHERE `status` = :status:
+AND `ip_address` = :ip_address:', [...], false)
+ 3 APPPATH\Models\CurdModel.php(12): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\AdminHome.php(13): App\Models\CurdModel->get_1('ip_address', 'allowed_ip', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminHome->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminHome))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-05-07 07:38:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-07 07:38:37 --> CSRF token verified.
+INFO - 2024-05-07 07:38:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-07 07:38:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-07 08:02:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-07 08:08:25 --> CSRF token verified.
+INFO - 2024-05-07 08:08:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-07 08:08:28 --> CSRF token verified.
+INFO - 2024-05-07 08:08:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-07 08:08:34 --> CSRF token verified.
+INFO - 2024-05-07 08:08:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-07 08:08:39 --> CSRF token verified.
+INFO - 2024-05-07 08:08:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-07 08:09:05 --> CSRF token verified.
+INFO - 2024-05-07 08:09:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-07 08:09:10 --> CSRF token verified.
+INFO - 2024-05-07 08:09:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-07 08:09:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-07 08:09:34 --> CSRF token verified.
+INFO - 2024-05-07 08:09:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-07 08:23:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-07 08:23:39 --> ErrorException: Undefined variable $allow
+in APPPATH\Views\adminlogin.php on line 18.
+ 1 APPPATH\Views\adminlogin.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $allow', 'C:\\xampp\\htdocs\\trust\\web-app\\app\\Views\\adminlogin.php', 18)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\trust\\web-app\\app\\Views\\adminlogin.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('adminlogin', [], true)
+ 5 APPPATH\Controllers\AdminHome.php(12): view('adminlogin')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\AdminHome->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminHome))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2024-05-07 08:23:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-07 08:26:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
